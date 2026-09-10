@@ -1,0 +1,21 @@
+{
+  "name": "sistema-ranking-academico",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistema de Ranking e Gestão Acadêmica - Estruturas de Dados 2 - Algoritmos de Ordenação",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c cyan,magenta \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build -w backend && npm run build -w frontend",
+    "start": "npm run build && npm run start -w backend",
+    "test": "npm run test -w backend",
+    "typecheck": "npm run typecheck -w backend && npm run typecheck -w frontend",
+    "gerar-dados": "npm run gerar-dados -w backend"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}

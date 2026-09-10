@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+*.log
+*.tsbuildinfo
+*.tmp
+*.tgz
+.vite/
+.env
+.env.local
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+docs/GUIA_DE_COMMITS.md
+executar_commits_ordenacao.sh
