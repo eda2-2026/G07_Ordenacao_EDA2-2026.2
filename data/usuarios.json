@@ -1,0 +1,5 @@
+[
+  {"id":1,"usuario":"admin","senha":"admin123","nome":"Administrador do Sistema","perfil":"admin"},
+  {"id":2,"usuario":"professor","senha":"123456","nome":"Professor Demonstração","perfil":"professor"},
+  {"id":3,"usuario":"coordenador","senha":"123456","nome":"Coordenador Demonstração","perfil":"coordenador"}
+]
