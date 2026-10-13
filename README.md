@@ -101,12 +101,6 @@ Na disciplina de Estruturas de Dados 2, algoritmos de ordenação costumam ser e
 
 </div>
 
-| Camada   | Tecnologias                                                    |
-| -------- | -------------------------------------------------------------- |
-| Frontend | React, Vite, TypeScript, Tailwind CSS, React Router, Recharts  |
-| Backend  | Node.js, Express, TypeScript                                   |
-| Dados    | Arquivos JSON (sem banco de dados)                             |
-| Testes   | Vitest                                                         |
 
 <div align="center">
   <h2>🤞 Como executar o projeto</h2>
@@ -182,11 +176,6 @@ Gera o build e serve tudo pela porta do backend: **http://localhost:3001**.
   <h2>🔐 Login demonstrativo</h2>
 </div>
 
-| Usuário       | Senha      | Perfil        |
-| ------------- | ---------- | ------------- |
-| `admin`       | `admin123` | Administrador |
-| `professor`   | `123456`   | Professor     |
-| `coordenador` | `123456`   | Coordenador   |
 
 > ⚠️ **Este sistema utiliza autenticação simulada exclusivamente para fins acadêmicos.** O sistema de autenticação é exclusivamente demonstrativo e não possui finalidade de segurança ou produção.
 
@@ -198,13 +187,6 @@ Gera o build e serve tudo pela porta do backend: **http://localhost:3001**.
   <h2>📊 Algoritmos</h2>
 </div>
 
-| Algoritmo      | Melhor     | Médio      | Pior       |
-| -------------- | ---------- | ---------- | ---------- |
-| Bubble Sort    | O(n)       | O(n²)      | O(n²)      |
-| Selection Sort | O(n²)      | O(n²)      | O(n²)      |
-| Insertion Sort | O(n)       | O(n²)      | O(n²)      |
-| Merge Sort     | O(n log n) | O(n log n) | O(n log n) |
-| Quick Sort     | O(n log n) | O(n log n) | O(n²)      |
 
 - 🫧 **Bubble Sort:** compara pares adjacentes e os troca quando estão fora de ordem. Termina cedo se uma passada não fizer trocas (por isso é O(n) em dados ordenados).
 - 🎯 **Selection Sort:** seleciona o menor elemento da parte não ordenada e o coloca na posição correta. Faz poucas trocas, mas sempre o mesmo número de comparações.
@@ -219,16 +201,12 @@ Detalhes de implementação, definição das métricas e resultados esperados: [
 </div>
 
 <div align="center">
-  <a href="LINK_DO_VIDEO">
+  <a href="https://youtu.be/5eIOjBwUeOA">
     <img src="https://img.shields.io/badge/YouTube-Apresentação-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Apresentação no YouTube">
   </a>
 </div>
 
-<div align="center">
-  <img src="docs/img/apresentacao.png" alt="Modo apresentação" width="80%"/>
-</div>
 
-<div align="center">
   <h2>👩‍💻 Contribuidores</h2>
 </div>
 
@@ -252,42 +230,3 @@ Detalhes de implementação, definição das métricas e resultados esperados: [
     </tr>
   </table>
 </div>
-
-<div align="center">
-  <h2>🧑‍💻 Estrutura do projeto</h2>
-</div>
-
-```text
-.
-├── frontend/        Interface web (React + Vite + TypeScript + Tailwind)
-├── backend/         API (Node.js + Express + TypeScript), algoritmos e testes
-│   └── src/algorithms/   bubbleSort, selectionSort, insertionSort, mergeSort, quickSort
-├── data/            Arquivos JSON com os dados fictícios
-├── docs/            Documentação (arquitetura, algoritmos, modelo de dados)
-├── README.md
-└── package.json     Scripts na raiz (dev, build, start, test)
-```
-
-| Pasta / arquivo | Descrição                                                                                       |
-| --------------- | ----------------------------------------------------------------------------------------------- |
-| `frontend/`     | Páginas, componentes, gráficos e cliente da API                                                 |
-| `backend/`      | Rotas REST, regras de negócio, armazenamento em JSON, algoritmos de ordenação e testes          |
-| `data/`         | `alunos`, `professores`, `disciplinas`, `notas` e `usuarios` em JSON                            |
-| `docs/`         | [`arquitetura.md`](docs/arquitetura.md), [`algoritmos.md`](docs/algoritmos.md), [`modelo-dados.md`](docs/modelo-dados.md) |
-| `package.json`  | Define os *workspaces* e os scripts `dev`, `build`, `start`, `test`                             |
-
-<div align="center">
-  <h2>🧪 Testes</h2>
-</div>
-
-```bash
-npm test
-```
-
-Os testes (Vitest) cobrem:
-
-- os cinco algoritmos com `[]`, `[1]`, `[1,2]`, `[2,1]`, `[1,1,1]`, `[5,4,3,2,1]` e outros vetores;
-- ordenação de objetos `Aluno` por nome, matrícula, nota e frequência, crescente e decrescente;
-- equivalência dos resultados entre todos os algoritmos e imutabilidade do vetor original;
-- comportamento por cenário (por exemplo, Bubble/Insertion em O(n) com dados ordenados e Quick Sort quadrático);
-- regras de média e situação, login, CRUD, filtros, paginação, ranking, laboratório, estatísticas, relatórios e alertas da API.
